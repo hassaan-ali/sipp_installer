@@ -1,5 +1,5 @@
 # sipp_installer
-The purpose of this script is to streamline the installation of SIPp on Ubuntu 16.04. Normally, there are many dependencies that must be satisfied before SIPp can be installed. This can be extremely frustrating and time consuming. This script will take care of that. 
+The purpose of this script is to streamline the installation of SIPp on CentOS 7. Normally, there are many dependencies that must be satisfied before SIPp can be installed. This can be extremely frustrating and time consuming. This script will take care of that. 
 
 #Instructions 
 1. Download / clone the script. 
