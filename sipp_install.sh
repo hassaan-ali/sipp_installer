@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Created By : Keith Croxford (https://www.linkedin.com/in/kcroxford/)
-# Date: 9/29/2018 
+# Originally Created By : Keith Croxford (https://www.linkedin.com/in/kcroxford/)
+# Modified for CentOS-7 By: Hassaan Ali (www.linkedin.com/in/hassaana)
+# Date: 5/27/2020 
 # Purpose: This script will install SIPp on a fresh install of Ubuntu Server 16.04 LTS
 # Instructions : 
 #   1. Copy the script to your home folder
@@ -24,26 +25,25 @@ test $? -eq 0 || exit 1 "You need sudo privilleges to run this!"
 
 echo !!! Performing a package update. !!! 
 
-sudo apt-get update 
+yum update
 
 echo !!! Installing the pre-reqs for sipp3.3 !!!
 
-while read -r p ; do sudo apt-get install -y $p ; done < <(cat << "EOF"
+while read -r p ; do sudo yum install -y $p ; done < <(cat << "EOF"
     openssl
-    libssl-dev
-    libssl1.0.0
-    pcaputils
-    libncurses5-dev
-    libpcap-dev
-    libsctp-dev
+    openssl-devel
+    perl-Net-Pcap
+    ncurses-devel
+    libpcap-devel
+    lksctp-tools-devel
     autoconf 
     make
     gcc
-    g++
     git 
     bison  
 EOF
 )
+yum --setopt=group_package_types=mandatory,default,optional groupinstall "Development Tools"
 
 echo !!! Obtaining sipp source file. !!!
 sudo wget https://downloads.sourceforge.net/project/sipp/sipp/3.3/sipp-3.3.tar.gz -P /tmp
