@@ -43,7 +43,7 @@ while read -r p ; do sudo yum install -y $p ; done < <(cat << "EOF"
     bison  
 EOF
 )
-yum --setopt=group_package_types=mandatory,default,optional groupinstall "Development Tools"
+yum --setopt=group_package_types=mandatory,default,optional groupinstall "Development Tools" -y
 
 echo !!! Obtaining sipp source file. !!!
 sudo wget https://downloads.sourceforge.net/project/sipp/sipp/3.3/sipp-3.3.tar.gz -P /tmp
