@@ -3,7 +3,7 @@
 # Originally Created By : Keith Croxford (https://www.linkedin.com/in/kcroxford/)
 # Modified for CentOS-7 By: Hassaan Ali (www.linkedin.com/in/hassaana)
 # Date: 5/27/2020 
-# Purpose: This script will install SIPp on a fresh install of Ubuntu Server 16.04 LTS
+# Purpose: This script will install SIPp on a fresh install of CentOS 7.
 # Instructions : 
 #   1. Copy the script to your home folder
 #   2. Make the script executable on your system
