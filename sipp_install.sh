@@ -25,7 +25,7 @@ test $? -eq 0 || exit 1 "You need sudo privilleges to run this!"
 
 echo !!! Performing a package update. !!! 
 
-yum update
+yum update -y
 
 echo !!! Installing the pre-reqs for sipp3.3 !!!
 
